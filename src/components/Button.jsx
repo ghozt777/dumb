@@ -4,7 +4,7 @@ import { useCountContext } from './Context/SharedContext'
 
 export const Button = () => {
     
-    const {state,dispatch} = useCountContext()
+    const {dispatch} = useCountContext()
 
     const buttons = ['+' , '-']
     

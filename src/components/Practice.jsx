@@ -29,14 +29,14 @@ export const Test = () => {
     }
     
 
-    async function getKanye(){
+
+    useEffect(() => {
+       (async function() {
         const response = await fetch('https://api.kanye.rest/')
         const data = await response.json()
         await setKanye(data.quote)
-    }
-
-
-    useEffect(getKanye,[])
+       })()
+    },[])
     
     return(
         <div className='dumb'>
